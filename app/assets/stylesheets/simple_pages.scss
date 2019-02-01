@@ -5,39 +5,71 @@ body {
   background-color: #ffffee;
 }
 
+// SIDEBAR
+
+.sidebar {
+  position: fixed;
+  width: 140px;
+  min-height: 100%;
+  margin-bottom: -30px;
+  background-color: rgba(77, 77, 0, 0.6);
+  border-radius: 0px 10px 10px 0px;
+  padding-left: 0px;
+  max-width: 20%;
+}
+
+.sidebar-header{
+  margin-top: 70px;
+  margin-bottom: 20px;
+  border-top: 2px solid;
+  border-bottom: 2px solid;
+  display: inline-block;
+  color: #4d0000;
+}
+
+.sidebar-menu {
+  list-style-type: none !important;
+  padding-left: 30px;
+}
+
+// Note: ".sidebar-item" refers to the "a" element, "sidebar-menu li" to the "li" element, but
+// on the page it is rendered as one element.
+.sidebar-item {
+  color: #ffffee;
+}
+ .sidebar-item:hover {
+   text-decoration: none;
+   color: #4d0000;
+ }
+
+.sidebar-menu li {
+  padding-top: 30px;
+  font-size: 1.15em;
+}
+
+.sidebar-menu li:hover {
+  border-bottom: 2px solid #4d0000;
+  display: inline-block;
+  cursor: pointer;
+}
+
+// CONTENT
+
 .main-title {
   font-size: 3.125 em;
   color: #4d0000;
   padding-bottom: 20px;
+  margin-top: 30px;
 }
-
-.sidebar {
-  position: fixed;
-  width: 150px;
-  min-height: 100%;
-  margin-bottom: -30px;
-  margin-right: 70px;
-  background-color: rgba(77, 77, 0, 0.6);
-  border-radius: 0px 10px 10px 0px;
-}
-
-.sidebar-header{
-  margin-top: 20px;
-  margin-bottom: 20px;
-  color: #4d0000;
-}
-
-.sidebar-item { color: #ffffee; }
-
-.sidebar-menu { list-style-type: none !important; }
 
 .page-wrap {
   padding-top: 20px;
-  padding-left: 170px;
   padding-bottom: 15px;
+  margin: auto;
   text-align: center;
   min-height: 100%;
   margin-bottom: -30px;
+  max-width: 80%;
 }
 
 .page-wrap:after {
@@ -45,12 +77,17 @@ body {
   display: block;
 }
 
-footer, .page-wrap:after { height: 30px; }
-
 .welcome-img {
   border-style: double;
+  margin: auto;
   margin-top: 30px;
+  display: block;
 }
+
+footer, .page-wrap:after { height: 30px; }
+
+// FOOTER
+
 footer {
   background-color: rgba(77, 0, 0, 0.8);
   color: black;

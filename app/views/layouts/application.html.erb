@@ -17,7 +17,7 @@
 
   <body>
 
-    <div class="sidebar sidebar-wrap">
+    <div class="sidebar sidebar-wrap container">
       <nav class="sidebar-nav sidebar-light sidebar-expand-lg" style="overflow: visible">
 <!--        <button class="sidebar-toggler" type="button" data-toggle="collapse" data-target="#sidebar-toggler" aria-controls="sidebar-toggler" aria-expanded="false" aria-label="Toggle side navigation">
           <span class="sidebar-toggler-icon"></span>
@@ -25,13 +25,13 @@
         <div class="collapse sidebar-collapse" id="sidebar-toggler">-->
           <ul class="sidebar-menu">
             <h3 class="sidebar-header">Menu</h3>
-            <li><%= link_to "Home", root_path, :class=> "sidebar-item sidebar-item" %></li>
+            <li><%= link_to "Home", root_path, :class=> "sidebar-item" %></li>
             <li><%= link_to "About", simple_pages_about_path, :class=> "sidebar-item" %></li>
             <li><%= link_to "Contact", simple_pages_contact_path, :class=> "sidebar-item" %></li>
           </ul>
-       </div>
+<!--       </div>  -->
       </nav>
-<!--    </div> -->
+    </div>
     <%= yield %>
 
     <footer>
