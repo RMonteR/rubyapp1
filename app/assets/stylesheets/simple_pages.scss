@@ -7,47 +7,90 @@ body {
 
 // SIDEBAR
 
-.sidebar {
+.wrapper {
+  display: flex;
+  align-items: stretch;
   position: fixed;
-  width: 140px;
-  min-height: 100%;
-  margin-bottom: -30px;
+}
+
+#sidebar {
+  min-width: 140px;
+  max-width: 140px;
+  position: fixed;
+  min-height: 100vh;
   background-color: rgba(77, 77, 0, 0.6);
   border-radius: 0px 10px 10px 0px;
-  padding-left: 0px;
-  max-width: 20%;
+  transition: all 0.3s;
+  padding-top: 70px;
 }
 
-.sidebar-header{
-  margin-top: 70px;
-  margin-bottom: 20px;
-  border-top: 2px solid;
-  border-bottom: 2px solid;
-  display: inline-block;
-  color: #4d0000;
+#sidebar.active {
+  margin-left: 0;
 }
 
-.sidebar-menu {
+@media (max-width: 768px) {
+  #sidebar.active {
+    margin-left: -140px;
+  }
+}
+
+@media (min-width: 768px) {
+  .page-wrap {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+// .sidebar {
+//   position: fixed;
+//   width: 140px;
+//   min-height: 100%;
+//   margin-bottom: -30px;
+//   background-color: rgba(77, 77, 0, 0.6);
+//   border-radius: 0px 10px 10px 0px;
+//   padding-left: 0px;
+//   max-width: 20%;
+// }
+//
+// .sidebar-header{
+//   margin-top: 70px;
+//   margin-bottom: 20px;
+//   border-top: 2px solid;
+//   border-bottom: 2px solid;
+//   display: inline-block;
+//   color: #4d0000;
+// }
+//
+.sidebar-list {
   list-style-type: none !important;
   padding-left: 30px;
 }
 
-// Note: ".sidebar-item" refers to the "a" element, "sidebar-menu li" to the "li" element, but
-// on the page it is rendered as one element.
+button span {
+  color: #4d0000;
+}
+
+.dropdown-toggle::after {
+  color: #4d0000;
+}
+//
+// // Note: ".sidebar-item" refers to the "a" element, "sidebar-list li" to the "li" element, but
+// // on the page it is rendered as one element.
 .sidebar-item {
   color: #ffffee;
+  line-height: 1.3;
 }
  .sidebar-item:hover {
    text-decoration: none;
    color: #4d0000;
  }
 
-.sidebar-menu li {
+.sidebar-list li {
   padding-top: 30px;
   font-size: 1.15em;
 }
 
-.sidebar-menu li:hover {
+.sidebar-list li:hover {
   border-bottom: 2px solid #4d0000;
   display: inline-block;
   cursor: pointer;
@@ -72,10 +115,10 @@ body {
   max-width: 80%;
 }
 
-.page-wrap:after {
-//  content: ""; What is this for?
-  display: block;
-}
+// .page-wrap:after {
+//   content: "";
+//   display: block;
+// }
 
 .welcome-img {
   border-style: double;
