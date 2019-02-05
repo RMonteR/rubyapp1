@@ -1,0 +1,107 @@
+
+.main-title {
+  font-size: 3.125 em;
+  color: #4d0000;
+  padding-bottom: 20px;
+  margin-top: 30px;
+}
+
+// PRODUCTS table
+.products-table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.products-th {
+  font-size: 1.50em;
+  padding: 5px;
+}
+
+.show-td { margin-left: 40px; }
+
+.td-btn { font-family: Georgia, Times, "Times New Roman", serif; }
+
+.td-btn:hover {
+  background: none;
+  color: #333;
+ }
+.td-result { font-size: 15px; }
+
+// PRODUCTS button to create new button
+.new-prod-btn {
+  background-color: rgba(139,166,171, 0.6);
+  padding: 10px 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.new-prod-btn a {
+  color: #4d0000;
+  font-size: 1.30em;
+  margin: 5px;
+}
+
+.new-prod-btn a:visited, .submit-btn:visited {
+color: #ffffee;
+}
+
+.new-prod-btn a:hover, .fa-angle-left {
+  text-decoration: none !important;
+  color: #4d0000;
+  background: none !important;
+}
+
+.submit-btn {
+  color: #ffffee;
+  font-size: 1.30em;
+  margin: 5px;
+  background-color: rgba(139,166,171, 0.6);
+  padding: 10px 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  color: #4d0000;
+  cursor: pointer;
+}
+
+//NEW product form with fields
+.new-prod-form {
+  padding: 20px;
+}
+
+.form-control {
+  margin: auto;
+  width: 30%;
+}
+
+.field label {
+  font-size: 18px;
+}
+
+
+
+// NEW go back to "create new product" link
+// Note: at the moment the only clickable part of fa-angle-left is the a. Make the icon clickable as well.
+.fa-angle-left {
+  font-size: 25px;
+  padding-top: 30px;
+}
+
+.fa-angle-left a {
+  color: #333;
+  margin-left: 20px;
+}
+
+.fa-angle-left a:hover {
+  text-decoration: none;
+  color: rgba(139, 166, 171, 0.6);
+  background: none;
+}
+
+// SHOW page
+#notice, .show-div p, a {
+  font-size: 18px;
+  font-family: Georgia, Times, "Times New Roman", serif;
+}

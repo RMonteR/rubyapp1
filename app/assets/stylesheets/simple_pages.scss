@@ -1,12 +1,9 @@
-* {
-  margin: 0;
-}
-
 html, body { height: 100%; }
 
 body {
   font-family: Georgia, Times, "Times New Roman", serif;
   background-color: #ffffee;
+  margin: 0;
 }
 
 // SIDEBAR
@@ -16,7 +13,7 @@ body {
   width: 140px;
   min-height: 100%;
   margin-bottom: -30px;
-  background-color: rgba(77, 77, 0, 0.6);
+  background-color: rgba(139,166,171, 0.6);
   border-radius: 0px 10px 10px 0px;
   padding-left: 0px;
   max-width: 20%;
@@ -72,8 +69,8 @@ body {
 
   min-height: 100%;
   margin-bottom: -30px;
-  max-width: 80%;
   text-align: center;
+  margin-top: 0;
 }
 
 .page-wrap:after {
