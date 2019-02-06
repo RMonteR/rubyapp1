@@ -6,17 +6,23 @@
   <div class="row products-row">
     <% @products.each do |product| %>
       <div class="col-sm">
-        <div class="box">
-<%= image_tag(product.image_url, class: "img-fluid") unless product.image_url.nil? %>
+        <div class="prod-box">
+          <%= image_tag(product.image_url, class: "img-fluid") unless product.image_url.nil? %>
+          <h4><%= product.name %></h4>
+          <p>Colour: <%= product.colour %></p>
+          <p>Description: <%= product.description %></p>
+          <p>Price (€): <%= product.price %></p>
+          <div class="prod-edit-btn">
+            <p class= td-btn><%= link_to 'Show', product, :class=> "td-btn" %></p>
+            <p class= td-btn><%= link_to 'Edit', edit_product_path(product), :class=> "td-btn" %></p>
+            <p class= td-btn><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' }, :class=> "td-btn" %></p>
+          </div>
         </div>
-        <h4><%= product.name %></h4>
-        <p>Colour: <%= product.colour %></p>
-        <p>Description: <%= product.description %></p>
       </div><!-- col -->
     <% end %>
   </div><!-- row -->
 
-    <table class= "products-table">
+    <!-- <table class= "products-table">
       <thead>
         <tr>
           <th class= "products-th">Name</th>
@@ -41,8 +47,8 @@
           </tr>
         <% end %>
       </tbody>
-    </table>
-    <br>
+    </table> -->
+    <hr>
 
     <button type="button" class="new-prod-btn"><%= link_to 'Create a new product', new_product_path %></button>
 </div>
