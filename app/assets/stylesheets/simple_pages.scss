@@ -6,51 +6,54 @@ body {
   margin: 0;
 }
 
-// SIDEBAR
+// OLD SIDEBAR
+//
+// .sidebar {
+//   position: fixed;
+//   width: 140px;
+//   min-height: 100%;
+//   margin-bottom: -30px;
+//   background-color: rgba(139,166,171, 0.6);
+//   border-radius: 0px 10px 10px 0px;
+//   padding-left: 0px;
+//   max-width: 20%;
+// }
 
-.sidebar {
-  position: fixed;
-  width: 140px;
-  min-height: 100%;
-  margin-bottom: -30px;
+// NAVBAR
+.main-nav {
   background-color: rgba(139,166,171, 0.6);
-  border-radius: 0px 10px 10px 0px;
-  padding-left: 0px;
-  max-width: 20%;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
-.sidebar-header{
-  margin-top: 70px;
-  margin-bottom: 20px;
+.main-nav-header {
   border-top: 2px solid;
   border-bottom: 2px solid;
-  display: inline-block;
   color: #4d0000;
+  margin: 10px 0;
 }
 
-.sidebar-menu {
+.main-nav-menu {
   list-style-type: none !important;
-  padding-left: 30px;
 }
 
 // Note: ".sidebar-item" refers to the "a" element, "sidebar-menu li" to the "li" element, but
 // on the page it is rendered as one element.
-.sidebar-item {
+.main-nav-item {
   color: #ffffee;
 }
- .sidebar-item:hover {
+ .main-nav-item:hover {
    text-decoration: none;
    color: #4d0000;
  }
 
-.sidebar-menu li {
-  padding-top: 30px;
+.main-nav-menu li {
+  padding-bottom: 10px;
   font-size: 1.15em;
 }
 
-.sidebar-menu li:hover {
-  border-bottom: 2px solid #4d0000;
-  display: inline-block;
+.main-nav-menu li:hover {
   cursor: pointer;
 }
 
@@ -61,16 +64,20 @@ body {
   color: #4d0000;
   padding-bottom: 20px;
   margin-top: 30px;
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
 }
 
 .page-wrap {
-  padding-top: 20px;
+  padding-top: 70px;
   padding-bottom: 15px;
 
   min-height: 100%;
   margin-bottom: -30px;
-  text-align: center;
-  margin-top: 0;
+//  margin-top: 0;
 }
 
 .page-wrap:after {

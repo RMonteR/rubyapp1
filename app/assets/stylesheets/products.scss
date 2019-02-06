@@ -19,11 +19,15 @@
 
 .show-td { margin-left: 40px; }
 
-.td-btn { font-family: Georgia, Times, "Times New Roman", serif; }
+.td-btn {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  color: #5a7592;
+ }
 
 .td-btn:hover {
   background: none;
   color: #333;
+  text-decoration: none;
  }
 .td-result { font-size: 15px; }
 
@@ -104,4 +108,15 @@ color: #ffffee;
 #notice, .show-div p, a {
   font-size: 18px;
   font-family: Georgia, Times, "Times New Roman", serif;
+}
+
+show-div {
+  margin: auto;
+}
+
+//
+
+.box {
+  border: 1px solid grey;
+  margin-bottom: 10px;
 }
