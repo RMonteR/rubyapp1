@@ -1,7 +1,17 @@
 <div class= "page-wrap container">
 
   <h1 class= "main-title">Featured Product:</h1>
-  <%= @featured_product.name %>
 
-  <p>Go to <%= link_to 'Orders', orders_url %></p>
+  <div class="col-sm">
+    <div class="prod-box">
+      <%= image_tag(@featured_product.image_url, class: "img-fluid prod-image") %>
+      <h5 class= "featured-name"><%= @featured_product.name %></h5>
+      <p><%= @featured_product.description %></p>
+    </div>
+  </div>
+
+  <div class= "admin-div">
+    <p>Admin<p>
+      <p>Go to <%= link_to 'Orders', orders_url %></p>
+  </div>
 </div>
