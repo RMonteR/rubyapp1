@@ -2,12 +2,11 @@
   <p id="notice"><%= notice %></p>
 
   <h1 class= "main-title">Products</h1>
-
   <div class="row products-row">
     <% @products.each do |product| %>
       <div class="col-sm">
         <div class="prod-box">
-          <%= image_tag(product.image_url, class: "img-fluid") unless product.image_url.nil? %>
+          <%= image_tag(product.image_url, class: "img-fluid prod-image") unless product.image_url.nil? %>
           <h4><%= product.name %></h4>
           <p>Colour: <%= product.colour %></p>
           <p>Description: <%= product.description %></p>

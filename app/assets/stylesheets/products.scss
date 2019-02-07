@@ -36,7 +36,7 @@
 // PRODUCTS button to create new button
 .new-prod-btn {
   background-color: rgba(139,166,171, 0.9);
-  padding: 10px 5px;
+  padding: 10px 15px;
   border-radius: 5px;
   margin: 0;
   float: right;
@@ -134,4 +134,8 @@ show-div {
 
 .prod-box h4 {
   padding-top: 15px;
+}
+
+.prod-image {
+  display: block;
 }
