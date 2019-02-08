@@ -4,9 +4,11 @@
 
   <div class="col-sm">
     <div class="prod-box">
-      <%= image_tag(@featured_product.image_url, class: "img-fluid prod-image") %>
-      <h5 class= "featured-name"><%= @featured_product.name %></h5>
-      <p><%= @featured_product.description %></p>
+      <%= image_tag(@featured_product.image_url, class: "img-fluid prod-image", size: "250x250") %>
+      <div>
+        <h5 class= "featured-name"><%= @featured_product.name %></h5>
+        <p><%= @featured_product.description %></p>
+      </div>
     </div>
   </div>
 
