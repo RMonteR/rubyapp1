@@ -1,19 +1,40 @@
 <div class= "page-wrap container">
 
-  <h1 class= "main-title">Featured Product:</h1>
+  <h1 class= "main-title">Featured Products:</h1>
 
-  <div class="col-sm">
-    <div class="prod-box">
-      <%= image_tag(@featured_product.image_url, class: "img-fluid prod-image", size: "250x250") %>
-      <div>
-        <h5 class= "featured-name"><%= @featured_product.name %></h5>
-        <p><%= @featured_product.description %></p>
-      </div>
+  <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <% @products.each_with_index do |product, i| %>
+        <li data-target="#carouselExampleIndicators" data-slide-to=#{i) class="#{'active' if i == 0}"></li>
+      <% end %>
+      <!-- <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+    </ol>
+
+    <div class="carousel-inner">
+      <% @products.each do |product| %>
+        <div class="carousel-item<%= "active" if product == @products.first %>">
+          <%=image_tag(product.image_url, class: "img-fluid prod-image") %>
+          <div class="carousel-caption d-none d-md-block">
+            <%= product.name %>
+          </div>
+        </div>
+      <% end %>
     </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
   </div>
 
   <div class= "admin-div">
     <p>Admin<p>
-      <p>Go to <%= link_to 'Orders', orders_url %></p>
+    <p>Go to <%= link_to 'Orders', orders_url %></p>
   </div>
 </div>

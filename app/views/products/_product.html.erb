@@ -1,0 +1,14 @@
+<div class="col-sm">
+  <div class="prod-box">
+    <%= image_tag(product.image_url, class: "img-fluid prod-image") unless product.image_url.nil? %>
+    <h4><%= product.name %></h4>
+    <p>Colour: <%= product.colour %></p>
+    <p>Description: <%= product.description %></p>
+    <p>Price (€): <%= product.price %></p>
+    <div class="prod-edit-btn">
+      <p class= "td-btn"><%= link_to 'Show', product, :class=> "td-btn" %></p>
+      <p class= "td-btn"><%= link_to 'Edit', edit_product_path(product), :class=> "td-btn" %></p>
+      <p class= "td-btn"><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' }, :class=> "td-btn" %></p>
+    </div>
+  </div><!-- prod-box -->
+</div><!-- col -->
