@@ -3,7 +3,9 @@
 
   <h1 class= "main-title">Products</h1>
   <div class="row products-row">
-    <%= render @products %>
+    <% @products.each do |product| %>
+      <%= render product %>
+    <% end %>
   </div><!-- row -->
 
     <!-- <table class= "products-table">

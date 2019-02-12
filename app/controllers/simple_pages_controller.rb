@@ -3,6 +3,6 @@ class SimplePagesController < ApplicationController
   end
 
   def landing_page
-    @products = Product.limit(4)
+    @products = Product.last(3)
   end
 end
