@@ -23,30 +23,19 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto main-nav-menu">
           <li class="nav-item active"><%= link_to "Home", root_path, :class=> "main-nav-item" %></li>
-          <li><%= link_to "About", simple_pages_about_path, :class=> "main-nav-item" %></li>
-          <li><%= link_to "Contact", simple_pages_contact_path, :class=> "main-nav-item" %></li>
+          <li><%= link_to "Products", products_path, :class => "main-nav-item" %> </li>
+          <li> <%= link_to "About", simple_pages_about_path, :class=> "main-nav-item" %> </li>
+          <li> <%= link_to "Contact", simple_pages_contact_path, :class=> "main-nav-item" %></li>
         </ul>
       </div>
     </nav>
 
-<!-- OLD SIDEBAR: REMOVE OR REINSERT -->
-    <!-- <div class="sidebar sidebar-wrap">
-      <nav class="sidebar-nav sidebar-light sidebar-expand-lg" style="overflow: visible">
-          <ul class="sidebar-menu">
-            <h3 class="sidebar-header">Menu</h3>
-            <li><%= link_to "Home", root_path, :class=> "sidebar-item" %></li>
-            <li><%= link_to "About", simple_pages_about_path, :class=> "sidebar-item" %></li>
-            <li><%= link_to "Contact", simple_pages_contact_path, :class=> "sidebar-item" %></li>
-          </ul>
-      </nav>
-    </div> -->
     <%= yield %>
 
     <footer class="site-footer">
-      Part of CF Web Dev Course    &copy; 2019 MadeUpBikes Berlin 
+      Part of CF Web Dev Course    &copy; 2019 MadeUpBikes Berlin
     </footer>
 <!------------------ BOOTSTRAP CORE JS -------------------->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 

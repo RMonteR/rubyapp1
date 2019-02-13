@@ -4,12 +4,13 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.all
+    @products = Product.all.sort_by {|product| product.created_at }.reverse
   end
 
   # GET /products/1
   # GET /products/1.json
   def show
+    @products = Product.all
   end
 
   # GET /products/new

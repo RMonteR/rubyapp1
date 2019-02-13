@@ -6,19 +6,7 @@
   margin-top: 30px;
 }
 
-// PRODUCTS table
-.products-table {
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.products-th {
-  font-size: 1.50em;
-  padding: 5px;
-}
-
-//.show-td { margin-left: 40px; }
-
+// Show, edit, delete btns
 .td-btn {
   font-family: Georgia, Times, "Times New Roman", serif;
   color: #5a7592;
@@ -33,7 +21,7 @@
  }
 .td-result { font-size: 15px; }
 
-// PRODUCTS button to create new button
+// NEW product btn
 .new-prod-btn {
   background-color: rgba(139,166,171, 0.9);
   padding: 10px 15px;
@@ -114,16 +102,18 @@ color: #ffffee;
 #notice, .show-div p, a {
   font-size: 18px;
   font-family: Georgia, Times, "Times New Roman", serif;
+  margin-top: 20px;
 }
 
-show-div {
+.show-div {
   margin: auto;
 }
 
-.prod-box {
-  border: 1px solid grey;
-  margin-bottom: 10px;
-  padding: 10px;
+.show-content {
+  margin-top: 50px;
+  padding: 30px;
+  border: 1px solid #5a7592;
+  border-radius: 5px;
 }
 
 .products-row {
@@ -132,11 +122,16 @@ show-div {
   border-radius: 2px;
 }
 
-.prod-box h4 {
-  padding-top: 15px;
-}
-
 .prod-image {
   display: block;
   margin: auto;
+  padding: 15px;
+}
+
+.prod-card {
+  border: 1px solid rgba(139, 166, 171, 0.9);
+}
+
+.card-columns {
+  display: inline-block;
 }
