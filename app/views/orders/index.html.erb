@@ -2,7 +2,7 @@
   <div class="row">
     <% @orders.each do |order| %>
       <div class="col-sm">
-        <h1>
+        <h1 class= "order-title">
           Order # <%= order.id %>:
           <%= link_to order.product&.name, order %>
         </h1>
