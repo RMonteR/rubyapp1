@@ -16,6 +16,11 @@
         <%= form.label :message %>
         <%= form.text_area :message, class: "form-control", placeholder: "Your Message", rows: 5 %>
       </div>
+      <div class="radio col-12">
+        <p>Do you need an answer?</p>
+        <label class="radio-inline" id="first-radio"><input type="radio" name="optradio" checked> Yes, please!</label>
+        <label class="radio-inline"><input type="radio" name="optradio"> No need to!</label>
+      </div>
   </div>
   <%= form.submit "Send", class: "form_label contact-btn" %>
   <% end %>
