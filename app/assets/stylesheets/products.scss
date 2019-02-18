@@ -61,14 +61,15 @@ color: #ffffee;
 }
 
 //NEW product form with fields
-.new-prod-form {
-  padding: 20px;
-}
 
-.form-control {
+#product-form {
   margin: auto;
   width: 30%;
   display: block;
+}
+
+.new-prod-form {
+  padding: 20px;
 }
 
 .field label {

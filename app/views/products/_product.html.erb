@@ -1,5 +1,5 @@
 <div class="card prod-card">
-  <%= image_tag(product.image_url, class: "img-fluid prod-image card-img-top") unless product.image_url.nil? %>
+  <%= image_tag(product.image_url, class: "img-fluid prod-image card-img-top") if product.image_url %>
   <div class="card-body">
     <h5><%= product.name %></h5>
     <p>Colour: <%= product.colour %></p>
