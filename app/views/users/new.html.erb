@@ -1,5 +1,10 @@
-<h1>New User</h1>
+<div class="container users-containers">
 
-<%= render 'form', user: @user %>
+  <h1 class= "devise-titles">New User</h1>
+    <div class= "devise-containers users-box">
 
-<%= link_to 'Back', users_path %>
+      <%= render 'form', user: @user %>
+
+    </div>
+    <%= link_to 'Back', users_path %>
+</div>

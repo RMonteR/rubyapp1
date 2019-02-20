@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+// VIEWS/DEVISE & VIEWS/USERS COMMON STYLES
+
 .devise-containers {
   padding: 20px;
   max-width: 48%;
@@ -16,20 +18,24 @@
   margin-top: 30px;
 }
 
-.devise-containers a {
+.devise-containers a, .users-containers a {
   font-family: Georgia, Times, "Times New Roman", serif;
   color: #5a7592;
   display: inline;
   padding: 2px;
 }
 
-.devise-containers a:hover {
+.devise-containers a:hover, .users-containers a:hover {
   background: none;
   color: #333;
   text-decoration: none;
 }
 
-.user-btn input, input[type="submit" i] {
+.users-containers a {
+  margin-top: 10px;
+}
+
+.user-btn input, input[type="submit" i], .user-btn a, user-btn {
   background-color: rgba(139,166,171, 0);
   padding: 5px 15px;
   border-radius: 5px;
@@ -44,6 +50,48 @@
   cursor: pointer;
 }
 
+.input-field {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+
+// VIEWS/DEVISE ONLY
+
 #edit-user-left {
   margin-right: 5px;
+}
+
+// VIEWS/USERS ONLY
+
+.users-box {
+  margin-bottom: 10px;
+}
+
+.devise-containers div.field {
+  padding: 10px;
+}
+
+.user-info {
+  font-size: 18px;
+  margin: 0;
+}
+
+#user-list {
+  max-width: 100%;
+}
+
+.userdata-row {
+  margin-top: 5px;
+}
+
+#new-user-btn a {
+  padding: 5px 15px;
+  border: 2px solid #4d0000;
+  border-radius: 5px;
+  color: #4d0000;
+}
+
+#new-user-btn a:hover {
+  cursor: pointer;
 }

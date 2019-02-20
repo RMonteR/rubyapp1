@@ -1,6 +1,12 @@
-<h1>Editing User</h1>
+<div class= "container users-containers">
 
-<%= render 'form', user: @user %>
+  <h1 class= "devise-titles">Editing User</h1>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+  <div class= "devise-containers users-box">
+    <%= render 'form', user: @user %>
+  </div>
+
+    <%= link_to 'Show', @user %> |
+    <%= link_to 'Back', users_path %>
+
+</div>

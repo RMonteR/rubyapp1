@@ -1,14 +1,29 @@
-<p id="notice"><%= notice %></p>
+<div class="container users-containers">
+  <h1 class= "devise-titles">User info</h1>
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+  <div class= "devise-containers users-box">
+    <% if notice %>
+      <p id="notice" class= "alert alert-secondary"><%= notice %></p>
+    <% end %>
+      
+    <p class= "user-info">
+      <strong>First name:</strong>
+      <%= @user.first_name %>
+    </p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+    <p class= "user-info">
+      <strong>Last name:</strong>
+      <%= @user.last_name %>
+    </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+    <p class= "user-info">
+      <strong>E-mail address: </strong>
+      <%= @user.email %>
+    </p>
+
+  </div>
+
+  <p> <%= link_to 'Edit', edit_user_path(@user)%> |
+  <%= link_to 'Back', users_path %> </p>
+
+</div>

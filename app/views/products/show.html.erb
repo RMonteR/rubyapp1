@@ -1,6 +1,8 @@
 <div class= "show-div container">
 
-  <p id="notice" class= "alert-secondary alert" role= "alert"><%= notice %></p>
+  <% if notice %>
+    <p id="notice" class= "alert-secondary alert"><%= notice %></p>
+  <% end %>
 
   <div class= "show-content">
 

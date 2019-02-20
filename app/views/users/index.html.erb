@@ -1,29 +1,36 @@
-<p id="notice"><%= notice %></p>
+<div class="container users-containers">
 
-<h1>Users</h1>
+  <h1 class= "devise-titles">Users</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
+  <% if notice %>
+    <p id="notice" class= "alert alert-secondary"><%= notice %></p>
+  <% end %>
+    
+  <table class= "table">
+    <thead>
       <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th scope= "col" class= "user-info user-info-table">First name</th>
+        <th scope= "col" class= "user-info user-info-table">Last name</th>
+        <th scope= "col" class= "user-info user-info-table">E-mail</th>
+        <th scope= "col" class= "user-info user-info-table">Options</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
 
-<br>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr scope= "row">
+          <td class= "user-info-table"><%= user.first_name %></td>
+          <td class= "user-info-table"><%= user.last_name %></td>
+          <td class= "user-info-table"><%= user.email %></td>
+          <td class= "user-info-table"><%= link_to 'Show', user %></td>
+          <td class= "user-info-table"><%= link_to 'Edit', edit_user_path(user) %></td>
+          <td class= "user-info-table"><%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to 'New User', new_user_path %>
+  <hr>
+  <p id= "new-user-btn"><%= link_to 'Create new User', new_user_path %></p>
+</div>
