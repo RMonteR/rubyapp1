@@ -1,42 +1,69 @@
-<div class= "show-div container">
+<div class= "container">
 
   <% if notice %>
     <p id="notice" class= "alert-secondary alert"><%= notice %></p>
   <% end %>
 
+  <h1 class="product-title">
+    <%= @product.name %>
+  </h1>
+
+
+
   <div class= "show-content">
+    <div class="row">
+      <div class= "col">
+        <%= image_tag(@product.image_url, class: "img-fluid prod-image card-img-top img-thumbnail") %>
+      </div>
 
-    <p>
-      <strong>Name:</strong>
-      <%= @product.name %>
-    </p>
+      <div class="col">
+        <p id="prod-name-detail">
+          <hr>
 
-    <p>
-      <strong>Description:</strong>
-      <%= @product.description %>
-    </p>
+          <i class="fas fa-book-open">
+            <p class="icon-text-title"> Description:</p>
+            <br>
+            <p class="icon-text icon-text-show">
+              <%= @product.description %>
+            </p>
+          </i>
 
-    <p>
-      <strong>Image url:</strong>
-      <%= @product.image_url %>
-    </p>
+        <i class="fas fa-palette">
+          <p class= "icon-text-title"> Colour:</p>
+          <p class="icon-text icon-text-show">
+            <%= @product.colour %>
+          </p>
+        </i>
 
-    <p>
-      <strong>Colour:</strong>
-      <%= @product.colour %>
-    </p>
+        <br>
 
-    <p>
-      <strong>Price (€):</strong>
-      <%= @product.price %>
-    </p>
+        <i class="fas fa-money-bill">
+          <p class= "icon-text-title"> Price:</p>
+          <p class="icon-text icon-text-show">
+            <%= @product.price %> €
+          </p>
+        </i>
 
-    <p>
-      <strong>Date Creation:</strong>
-      <%= @product.created_at %>
-    </p>
+        <hr>
 
-    <p> <%= link_to 'Edit', edit_product_path(@product), :class=> "td-btn" %> |
-    <%= link_to 'Back', products_path, :class=> "td-btn" %> </p>
+        <p class="icon-text-title">Our users say...</p>
+        <br>
+        <p class="icon-text-title">Highest:</p>
+          <p>
+            <%= @product.highest_rating_comment %>
+        </p>
+        <br>
+        <p class="icon-text-title">Lowest:</p>
+        <p>
+          <%= @product.lowest_rating_comment %>
+        </p>
+
+        <hr>
+
+      </div>
+    </div>
   </div>
+
+  <p> <%= link_to 'Edit', edit_product_path(@product), :class=> "td-btn" %> |
+    <%= link_to 'Back', products_path, :class=> "td-btn" %> </p>
 </div>

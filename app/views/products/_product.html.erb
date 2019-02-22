@@ -1,10 +1,18 @@
 <div class="card prod-card">
-  <%= image_tag(product.image_url, class: "img-fluid prod-image card-img-top") if product.image_url %>
+  <%= image_tag(product.image_url, class: "img-fluid prod-image card-img-top img-thumbnail") if product.image_url %>
   <div class="card-body">
     <h5><%= product.name %></h5>
-    <p>Colour: <%= product.colour %></p>
-    <p>Description: <%= product.description %></p>
-    <p>Price (€): <%= product.price %></p>
+    <i class="fas fa-palette">
+      <p class= "icon-text icon-text-index"> <%= product.colour %></p>
+    </i>
+    <br>
+    <i class="fas fa-book-open">
+      <p class= "icon-text icon-text-index"> <%= product.description %></p>
+    </i>
+    <br>
+    <i class="fas fa-money-bill">
+      <p class= "icon-text icon-text-index"> <%= product.price %> €</p>
+    </i>
   </div><!-- card body -->
   <div class="card-footer">
     <div class="prod-edit-btn">
