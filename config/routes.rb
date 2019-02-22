@@ -13,4 +13,9 @@ Rails.application.routes.draw do
 
   resources :orders, only: [:index, :show, :create, :destroy]
   root 'orders#index'
+
+  resources :products do
+    resources :comments
+  end
+
 end

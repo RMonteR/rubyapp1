@@ -1,0 +1,28 @@
+<div class="container">
+  <% if signed_in? %>
+
+  <div class="comment-form">
+
+    <p class="icon-text-title">Add a review:</p>
+
+    <%= form_for([@product, @product.comments.build]) do |f| %>
+      <p class= "icon-text icon-text-show">
+        <%= f.label :body, "Your comment" %>
+      </p>
+        <br>
+        <%= f.text_area :body, :class=> "form-control", :id=> "comment-field" %>
+      <br>
+      <div class= "icon-text icon-text-show">
+        <p>How many stars?</p>
+        <div class="rating" id="rating-form"></div>
+      </div>
+
+      <p>
+        <%= f.submit "Submit" %>
+      </p>
+    <% end %>
+  </div>
+
+  <% end %>
+
+</div>
