@@ -2,6 +2,13 @@ class Product < ApplicationRecord
   has_many :orders
   has_many :comments
 
+  validates :name, presence: true
+  validates :description, presence: true
+  validates :colour, presence: true
+  validates :price, presence: true
+  validates :image_url, presence: true
+
+
   def self.search(search_term)
     if Rails.env == "development"
       name_env = "name LIKE ?"
@@ -23,7 +30,7 @@ class Product < ApplicationRecord
   def average_rating
     comments.average(:rating).to_f
   end
-  
+
   def latest_comment
     comments.created_at.first
   end
