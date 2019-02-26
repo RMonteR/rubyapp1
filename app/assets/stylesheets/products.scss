@@ -1,7 +1,7 @@
 // Show, edit, delete btns
 .td-btn {
   font-family: Georgia, Times, "Times New Roman", serif;
-  color: #5a7592;
+  color: rgba(51, 65, 68, 0.9);
   display: inline;
   padding: 2px;
  }
@@ -23,11 +23,11 @@
 }
 
 .new-prod-btn a {
+  font-size: 1.40em;
   color: #4d0000;
-  font-size: 1.30em;
 }
 
-.new-prod-btn a:visited, .submit-btn:visited {
+.submit-btn:visited {
 color: #ffffee;
 }
 
@@ -37,6 +37,9 @@ color: #ffffee;
   background: none !important;
 }
 
+p:hover.new-prod-btn {
+  box-shadow: 10px 10px 5px grey;
+}
 .submit-btn {
   color: #ffffee;
   font-size: 1.30em;
@@ -122,12 +125,24 @@ color: #ffffee;
   padding: 15px;
 }
 
+// PRODUCT INDEX CARD
+
 .prod-card {
   border: 1px solid rgba(139, 166, 171, 0.9);
 }
 
 .card-columns {
   display: inline-block;
+}
+
+#card-prod-name a {
+  font-size: 1.5em;
+  color: #4d0000;
+}
+
+#card-prod-name a:hover {
+  color: #a70a0a;
+  text-decoration: none;
 }
 
 .icon-text, .icon-text-title {
