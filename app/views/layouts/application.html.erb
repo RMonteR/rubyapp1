@@ -16,12 +16,18 @@
   <body>
 
     <div class="container-fluid">
-<!-- AGGIUNGERE BOTTONE PER ATTIVARE MENÙ -->
+      <div class= "button-row row">
+        <div class= "col-2 button-col">
+          <button class="navbar-toggler" id="menu-btn" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <h3 class="main-nav-header">Menu</h3>
+          </button>
+        </div>
+      </div>
 
       <div class="row">
 
-        <div class="col-md-2 col-4 d-none d-md-block sidebar">
-          <h3 class="main-nav-header">Menu</h3>
+        <div class="col-md-2 d-none d-md-block sidebar" id="removable-sidebar">
+          <!-- <h3 class="main-nav-header">Menu</h3> -->
 
           <ul>
             <li><%= link_to "Home", root_path, :class=> "main-nav-item" %></li>
@@ -57,7 +63,7 @@
 
 
 
-        <div class="col-md-10 col-12 content">
+        <div class="col-md-10 content">
           <%= yield %>
         </div>
 
