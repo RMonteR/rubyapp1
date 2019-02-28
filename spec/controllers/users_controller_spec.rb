@@ -16,7 +16,8 @@ describe UsersController, type: :controller do
       end
 
       it 'does not load other users details' do
-        get :show, params: { id: user.id}
+        get :show, params: { id: user2.id}
+        expect(response).to have_http_status(302)
         expect(response).to redirect_to(root_path)
       end
     end
