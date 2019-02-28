@@ -2,10 +2,12 @@
   <h1 class= "devise-titles">User info</h1>
 
   <div class= "devise-containers users-box">
-    <% if notice %>
-      <p id="notice" class= "alert alert-secondary"><%= notice %></p>
+    <% if false %>
+      <% if notice %>
+        <!-- <p id="notice" class= "alert alert-secondary"><%= notice %></p> -->
+        <% end %>
     <% end %>
-      
+    
     <p class= "user-info">
       <strong>First name:</strong>
       <%= @user.first_name %>

@@ -9,18 +9,6 @@ class Ability
     cannot :manage, User
     return unless user.admin?
     can :manage, :all
-    # if
-    #   user ||= User.new # guest
-    #   can :read, [Product, Comment]
-    #   can :create, User
-    # elsif
-    #   user.present?
-    #   can :read, [Product]
-    #   can :manage, [User, Comment, Order], id: user.id
-    # elsif
-    #   user.admin?
-    #   can :manage, :all
-    # end
   end
 end
 

@@ -26,6 +26,8 @@ end
 private
 
   def comment_params
-    params.require(:comment).permit(:user_id, :body, :rating)
+    params.require(:comment).permit(:body, :rating)
+    # removed user_id from permit, to avoid that users can modify and use
+    # someone else's user_id
   end
 end
