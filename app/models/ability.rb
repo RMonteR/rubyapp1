@@ -6,7 +6,8 @@ class Ability
     return unless user.present?
     can :manage, [Comment, Order], user_id: user.id
     can :manage, User, id: user.id
-    cannot :manage, User
+    # cannot: manage, User
+    # the above line makes user_controller tests fail.
     return unless user.admin?
     can :manage, :all
   end
