@@ -54,11 +54,11 @@
     </nav>
 
     <% if notice %>
-      <p class="notice main-alert" role="alert"><%= notice %></p>
+      <p class="alert main-alert alert-secondary main-alert" role="alert"><%= notice %></p>
     <% end %>
 
     <% if alert %>
-      <p class="alert secondary-alert" role="alert"><%= alert %></p>
+      <p class="alert main-alert alert-secondary" role="alert"><%= alert %></p>
     <% end %>
 
     <%= yield %>
