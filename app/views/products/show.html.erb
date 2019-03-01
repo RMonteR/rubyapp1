@@ -4,7 +4,7 @@
     <% if notice %>
       <!-- <p id="notice" class= "alert-secondary alert"><%= notice %></p> -->
     <% end %>
-  <% end %>  
+  <% end %>
 
   <h1 class="product-title">
     <%= @product.name %>
@@ -50,6 +50,10 @@
           </p>
         </i>
 
+        <%= form_with(url: '/payments/create') do |form| %>
+          <%= render partial: "shared/stripe_checkout_button" %>
+        <% end %>
+        
         <hr>
 
         <p class="icon-text-title" id="rating-title">Our users say...</p>

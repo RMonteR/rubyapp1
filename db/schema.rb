@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_02_25_180412) do
+ActiveRecord::Schema.define(version: 2019_03_01_120225) do
 
   create_table "comments", force: :cascade do |t|
     t.integer "user_id"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 2019_02_25_180412) do
   create_table "orders", force: :cascade do |t|
     t.integer "user_id"
     t.integer "product_id"
-    t.float "total"
+    t.decimal "total", precision: 16, scale: 2
     t.index ["product_id"], name: "index_orders_on_product_id"
     t.index ["user_id"], name: "index_orders_on_user_id"
   end
@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 2019_02_25_180412) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "colour"
-    t.integer "price"
+    t.decimal "price", precision: 16, scale: 2
   end
 
   create_table "users", force: :cascade do |t|
