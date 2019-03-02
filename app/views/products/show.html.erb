@@ -53,7 +53,7 @@
         <%= form_with(url: '/payments/create') do |form| %>
           <%= render partial: "shared/stripe_checkout_button" %>
         <% end %>
-        
+
         <hr>
 
         <p class="icon-text-title" id="rating-title">Our users say...</p>
@@ -90,6 +90,9 @@
     </div>
   </div>
 
-  <p> <%= link_to 'Edit', edit_product_path(@product), :class=> "td-btn" %> |
+  <% if signed_in? && current_user.admin? %>
+    <p class="show-bottom-btn"> <%= link_to 'Edit', edit_product_path(@product), :class=> "td-btn" %> | </p>
+  <% end %>
+  <p class="show-bottom-btn">
   <%= link_to 'Back', products_path, :class=> "td-btn" %> </p>
 </div>

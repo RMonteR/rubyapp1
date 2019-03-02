@@ -17,3 +17,13 @@
   margin: auto;
   margin-top: 20px;
 }
+
+#order-prod-name a {
+  font-size: 0.6em;
+  color: #4d0000;
+}
+
+#order-prod-name a:hover {
+  color: #a70a0a;
+  text-decoration: none;
+}

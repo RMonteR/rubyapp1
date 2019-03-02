@@ -1,5 +1,5 @@
 <div class="card prod-card">
-  <%= image_tag(product.image_url, class: "img-fluid prod-image card-img-top img-thumbnail") if product.image_url %>
+  <%= link_to image_tag(product.image_url, class: "img-fluid prod-image card-img-top img-thumbnail"), product_path(product) %>
   <div class="card-body">
     <h5 id="card-prod-name">
       <%= link_to "#{product.name}", product_path(product) %>
@@ -21,9 +21,10 @@
   </div><!-- card body -->
   <div class="card-footer">
     <div class="prod-edit-btn">
-      <%= link_to 'Show', product_path(product), :class=> "td-btn" %>
-      <%= link_to 'Edit', edit_product_path(product), :class=> "td-btn" %>
-      <%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' }, :class=> "td-btn" %>
+      <% if signed_in? && current_user.admin? %>
+        <%= link_to 'Edit', edit_product_path(product), :class=> "td-btn" %>
+        <%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' }, :class=> "td-btn" %>
+      <% end %>
     </div><!-- prod-edit-btn -->
   </div><!-- card-footer -->
 

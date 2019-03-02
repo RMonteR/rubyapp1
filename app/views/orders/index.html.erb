@@ -4,10 +4,12 @@
       <div class="col-sm">
         <h1 class= "order-title">
           Order # <%= order.id %>:
+          <p id= "order-prod-name">
           <%= link_to order.product&.name, order %>
+        </p>
         </h1>
         <p><%= order.product&.description %></p>
-        <strong>$ <%= order.product&.price %></strong>
+        <strong>€ <%= order.product&.price %></strong>
       </div><!-- /col -->
     <% end %>
   </div>

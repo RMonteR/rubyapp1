@@ -13,6 +13,7 @@
     <% end %>
   </div>
   <hr>
-  <p class="new-prod-btn"><%= link_to 'Create a new product', new_product_path %></p>
-
+  <% if signed_in? && current_user.admin? %>
+    <p class="new-prod-btn"><%= link_to 'Create a new product', new_product_path %></p>
+  <% end %>
 </div>
