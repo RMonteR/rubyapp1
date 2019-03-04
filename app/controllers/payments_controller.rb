@@ -13,14 +13,13 @@ class PaymentsController < ApplicationController
         currency: "eur",
         source: token,
         description: params[:stripeEmail],
-        receipt_mail: params[:stripeEmail],
         capture: false
       )
     if charge.paid
       Order.create(
-        product_id: @product,
-        user_id: @user,
-        total: :amount
+        product_id: @product.id,
+        user_id: @user.id,
+        total: @product.price
       )
     end
 
