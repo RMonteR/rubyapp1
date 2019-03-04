@@ -16,6 +16,14 @@ class PaymentsController < ApplicationController
         receipt_mail: params[:stripeEmail],
         capture: false
       )
+    if charge.paid
+      Order.create(
+        product_id: @product,
+        user_id: @user,
+        total: :amount
+      )
+    end
+
     rescue Stripe::CardError => e
     # The card has been declined
     body = e.json_body
