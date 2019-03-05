@@ -5,7 +5,7 @@ class Ability
     can :create, User
     return unless user.present?
     can :manage, [Comment, Order], user_id: user.id
-    byebug
+    # byebug
     can :manage, User, id: user.id
     # cannot: manage, User
     # the above line makes user_controller tests fail.

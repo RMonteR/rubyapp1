@@ -10,7 +10,7 @@ class ProductsController < ApplicationController
     else
       @products = Product.order("created_at DESC")
       logger.debug "*** PRODUCT ID: #{@products.ids} ***"
-      byebug
+      # byebug
 
     end
   end
@@ -20,7 +20,7 @@ class ProductsController < ApplicationController
   def show
     @products = Product.all
     logger.debug "*** PRODUCT ID: #{@product.id} ***"
-    byebug
+    # byebug
     @comments = @product.comments.paginate(:page => params[:page], :per_page => 3).order("created_at DESC")
     # @comments = @product.comments.order("created_at DESC")
   end
