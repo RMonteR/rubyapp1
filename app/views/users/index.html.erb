@@ -7,7 +7,7 @@
     <!-- <p id="notice" class= "alert alert-secondary"><%= notice %></p> -->
   <% end %>
   <% end %>
-  
+
   <table class= "table">
     <thead>
       <tr>
@@ -28,11 +28,12 @@
           <td class= "user-info-table"><%= link_to 'Show', user %></td>
           <td class= "user-info-table"><%= link_to 'Edit', edit_user_path(user) %></td>
           <td class= "user-info-table"><%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <% logger.debug "User details: #{user.email} with role #{user.admin}" %>
+
         </tr>
       <% end %>
     </tbody>
   </table>
-
   <hr>
   <p id= "new-user-btn"><%= link_to 'Create new User', new_user_path %></p>
 </div>

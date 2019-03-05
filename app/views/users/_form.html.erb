@@ -29,6 +29,18 @@
      <div class="col"><%= form.text_field :email, class: "input-field" %> </div>
   </div>
 </div>
+
+<div class= "row">
+<div class="field">
+  <%= form.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+  <%= form.password_field :password, autocomplete: "new-password" %>
+  <% if @minimum_password_length %>
+    <br />
+    <em><%= @minimum_password_length %> characters minimum</em>
+  <% end %>
+</div>
+</div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
