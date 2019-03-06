@@ -117,6 +117,8 @@ h4, .contact-h5 {
   padding-bottom: 15px;
   min-height: 100%;
   margin-bottom: 30px;
+  background-color: #ffffee;
+
   }
 
 .container:after {
@@ -124,18 +126,30 @@ h4, .contact-h5 {
   display: block;
 }
 
-.container {
-  background-color: #ffffee;
-}
-
 .index-container {
   background-color: transparent !important;
+  background-attachment: fixed;
 }
 .welcome-img {
   border-style: double;
   margin: auto;
   margin-top: 30px;
   display: block;
+}
+
+.welcome-index {
+  border-radius: 30px;
+  background-color: rgba(139,166,171, 0.7);
+  max-width: 350px;
+  padding: 40px;
+  margin: 100px auto;
+}
+
+.welcome-title {
+  color: #4d0000;
+  text-align: center;
+  font-family: monospace;
+  font-size: 4em;
 }
 
 .site-footer, .page-wrap:after { height: 30px; }
