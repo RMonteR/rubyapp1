@@ -15,7 +15,7 @@
   <div class= "show-content">
     <div class="row">
       <div class= "col">
-        <%= image_tag(@product.image_url, class: "img-fluid prod-image card-img-top img-thumbnail") %>
+        <%= image_tag(@product.image_url, class: "img-fluid prod-image card-img-top img-thumbnail img-zoom", data_zoom_image: self) %>
         <p class="icon-text icon-text-show">
           <%= render 'new_comment' %>
         </p>
