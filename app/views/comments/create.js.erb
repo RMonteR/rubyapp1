@@ -1,0 +1,6 @@
+
+$("#new_comment, #review-title").hide();
+$(".comment-form").html('<h3 class="icon-text-title">Thank you for your review!</h3>');
+$('.product-reviews').prepend("<%= j render @comment %>");
+$("#average-rating").attr('data-score', "<%= @product.average_rating %>");
+refreshRating();
