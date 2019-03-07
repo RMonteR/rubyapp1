@@ -10,14 +10,16 @@
     </ol>
 
     <div class="carousel-inner">
-      <% @products.each do |product| %>
-        <div class="carousel-item <%= "active" if product == @products.first %>">
-          <%= image_tag(product.image_url, class: "img-fluid prod-image carousel-img") unless product.image_url.nil? %>
-          <div class="carousel-caption d-none d-md-block">
-            <%= product.name %>
+      <% cache(cache_key_for_products) do %>
+        <% @products.each do |product| %>
+          <div class="carousel-item <%= "active" if product == @products.first %>">
+            <%= image_tag(product.image_url, class: "img-fluid prod-image carousel-img") unless product.image_url.nil? %>
+            <div class="carousel-caption d-none d-md-block">
+              <%= product.name %>
+            </div>
           </div>
-        </div>
-      <% end %>
+        <% end %> <!-- carousel products loop -->
+      <% end %> <!-- end cache -->
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
