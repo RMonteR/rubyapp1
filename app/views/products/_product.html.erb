@@ -1,32 +1,33 @@
-<div class="card prod-card">
-  <%= link_to image_tag(product.image_url, class: "img-fluid prod-image card-img-top img-thumbnail"), product_path(product) %>
-  <div class="card-body">
-    <h5 id="card-prod-name">
-      <%= link_to "#{product.name}", product_path(product) %>
-      <% logger.debug "Product: #{product.name}" %>
-    </h5>
+<% cache product do %>
+  <div class="card prod-card">
+    <%= link_to image_tag(product.image_url, class: "img-fluid prod-image card-img-top img-thumbnail"), product_path(product) %>
+    <div class="card-body">
+      <h5 id="card-prod-name">
+        <%= link_to "#{product.name}", product_path(product) %>
+        <% logger.debug "Product: #{product.name}" %>
+      </h5>
 
-    <i class="fas fa-palette">
-      <p class= "icon-text icon-text-index"> <%= product.colour %></p>
-    </i>
-    <br>
-    <i class="fas fa-book-open"><br>
-      <p class= "icon-text icon-text-index"> <%= product.description %></p>
-    </i>
-    <br>
-    <i class="fas fa-money-bill">
-      <p class= "icon-text icon-text-index"> <%= product.price %> €</p>
-    </i>
-    <br>
-    <p class= "rated icon-text icon-text-index" data-score="<%= product.average_rating %>">On average: </p>
-  </div><!-- card body -->
-  <div class="card-footer">
-    <div class="prod-edit-btn">
-      <% if signed_in? && current_user.admin? %>
-        <%= link_to 'Edit', edit_product_path(product), :class=> "td-btn" %>
-        <%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' }, :class=> "td-btn" %>
-      <% end %>
-    </div><!-- prod-edit-btn -->
-  </div><!-- card-footer -->
-
-</div><!-- card -->
+      <i class="fas fa-palette">
+        <p class= "icon-text icon-text-index"> <%= product.colour %></p>
+      </i>
+      <br>
+      <i class="fas fa-book-open"><br>
+        <p class= "icon-text icon-text-index"> <%= product.description %></p>
+      </i>
+      <br>
+      <i class="fas fa-money-bill">
+        <p class= "icon-text icon-text-index"> <%= product.price %> €</p>
+      </i>
+      <br>
+      <p class= "rated icon-text icon-text-index" data-score="<%= product.average_rating %>">On average: </p>
+    </div><!-- card body -->
+    <div class="card-footer">
+      <div class="prod-edit-btn">
+        <% if signed_in? && current_user.admin? %>
+          <%= link_to 'Edit', edit_product_path(product), :class=> "td-btn" %>
+          <%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' }, :class=> "td-btn" %>
+        <% end %>
+      </div><!-- prod-edit-btn -->
+    </div><!-- card-footer -->
+  </div><!-- card -->
+<% end %>
