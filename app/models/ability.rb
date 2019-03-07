@@ -3,12 +3,13 @@ class Ability
   def initialize(user)
     can :read, [Product, Comment]
     can :create, User
+    cannot :read, User
     return unless user.present?
     can :manage, [Comment, Order], user_id: user.id
     # byebug
+    cannot :manage, User
+    cannot :read, User
     can :manage, User, id: user.id
-    # cannot: manage, User
-    # the above line makes user_controller tests fail.
     return unless user.admin?
     can :manage, :all
   end
