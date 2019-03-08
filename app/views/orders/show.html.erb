@@ -1,6 +1,7 @@
 <div class="container">
   <div class="devise-containers order-recap">
   <h2>Order Information</h2>
+  <% cache do %>
   <%= link_to image_tag(@order.product.image_url, class: "img-fluid prod-image card-img-top img-thumbnail") %>
   <strong>Order ID: </strong><%= @order.id %><br>
   <strong>Product Name: </strong><%= @order.product.name %><br>
@@ -9,5 +10,6 @@
   <strong>Payed on: </strong><br>
   <strong>Shipped on: </strong><br>
   <strong>Received on: </strong><br>
+  <% end %>
   </div>
 </div>

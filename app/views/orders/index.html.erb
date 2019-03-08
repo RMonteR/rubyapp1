@@ -1,5 +1,6 @@
 <div class="container">
   <h1 class= "order-title"> Your orders: </h1>
+  <hr>
   <div>
     <% cache @order do %>
 
@@ -9,8 +10,9 @@
             <p class= "order-prod-info">Order nr: </p><%= order.id %><br>
             <p class= "order-prod-info">Name: </p><%= order.product&.name %><br>
             <p class= "order-prod-info">Description: </p><%= order.product&.description %><br>
-            <i class= "order-prod-info order-link"> Click <%= link_to '*here*', orders_path %> for all details </i><br>
-            <strong class= "order-prod-info">Price: € <%= order.product&.price %></strong>
+            <strong class= "order-prod-info">Price: € <%= order.product&.price %></strong><br>
+            <i class= "order-prod-info order-link"> Click <%= link_to '*here*' %> for all details </i>
+            <!-- find out the right route to redirect the above "link_to" orders/show -->
           </div>
           <div class="col-2 order-image">
             <%= link_to image_tag(order.product.image_url, class: "order-image img-thumbnail") %>
