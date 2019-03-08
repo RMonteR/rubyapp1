@@ -1,16 +1,23 @@
 <div class="container">
-  <div class="row">
+  <h1 class= "order-title"> Your orders: </h1>
+  <div>
+    <% cache @order do %>
+
     <% @orders.each do |order| %>
-      <div class="col-sm">
-        <h1 class= "order-title">
-          Order # <%= order.id %>:
-          <p id= "order-prod-name">
-          <%= link_to order.product&.name, order %>
-        </p>
-        </h1>
-        <p><%= order.product&.description %></p>
-        <strong>€ <%= order.product&.price %></strong>
-      </div><!-- /col -->
-    <% end %>
+      <div class= "row">
+        <div class= "col-md-4 col-12">
+          <%= link_to image_tag(order.product.image_url, class: "img-fluid prod-image card-img-top img-thumbnail") %>
+        </div>
+        <div class= "col-md-8 col-12">
+          <p class= "order-prod-id">Order # <%= order.id %>: <p>
+          <p class= "order-prod-name">Name: <%= link_to order.product&.name, order %>
+          </p>
+          <p class= "order-prod-info">Description: <%= order.product&.description %></p>
+          <hr>
+          <strong class= "order-prod-info">Price: € <%= order.product&.price %></strong>
+        </div>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

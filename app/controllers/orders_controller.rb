@@ -3,7 +3,8 @@ class OrdersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @orders = Order.includes(:product).all
+    @user = current_user
+    @orders = Order.includes(:product).all.where(:user_id => @user)
   end
 
   def show

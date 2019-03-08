@@ -18,12 +18,30 @@
   margin-top: 20px;
 }
 
-#order-prod-name a {
-  font-size: 0.6em;
+.order {
+  font-size: 1.5em;
   color: #4d0000;
 }
 
-#order-prod-name a:hover {
+
+.order-prod-info {
+  font-size: 1.1em;
+}
+.order-prod-name, .order-prod-id {
+  font-size: 1.2em;
+}
+
+.order-prod-name a {
+  color: #4d0000;
+}
+
+.order-prod-name a:hover {
   color: #a70a0a;
   text-decoration: none;
+}
+
+.order-row {
+  border: 1px solid rgba(139, 166, 171, 0.9);
+  padding: 10px;
+  margin: 20px;
 }
