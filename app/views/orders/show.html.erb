@@ -1,9 +1,13 @@
 <div class="container">
   <div class="devise-containers order-recap">
   <h2>Order Information</h2>
+  <%= link_to image_tag(@order.product.image_url, class: "img-fluid prod-image card-img-top img-thumbnail") %>
   <strong>Order ID: </strong><%= @order.id %><br>
   <strong>Product Name: </strong><%= @order.product.name %><br>
-  <strong>Product Price: </strong><%= number_to_currency(@order.product.price/100.to_f) %><br>
-  <strong>Total Price: </strong><%= number_to_currency(@order.total/100.to_f) %>
-</div>
+  <strong>Product Price: €</strong><%= @order.product.price %><br>
+  <strong>Total Price: €</strong><%= @order.total %><br>
+  <strong>Payed on: </strong><br>
+  <strong>Shipped on: </strong><br>
+  <strong>Received on: </strong><br>
+  </div>
 </div>

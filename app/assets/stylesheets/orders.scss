@@ -23,23 +23,31 @@
   color: #4d0000;
 }
 
-
 .order-prod-info {
   font-size: 1.1em;
-}
-.order-prod-name, .order-prod-id {
-  font-size: 1.2em;
+  display: inline;
+  font-weight: bold;
 }
 
-.order-prod-name a {
+.order-prod-info a {
   color: #4d0000;
 }
 
-.order-prod-name a:hover {
+.order-prod-info a:hover {
   color: #a70a0a;
   text-decoration: none;
 }
+.order-link {
+  font-weight: normal;
+}
 
+.order-image {
+  display: inline;
+}
+
+.order-col {
+  display: inline;
+}
 .order-row {
   border: 1px solid rgba(139, 166, 171, 0.9);
   padding: 10px;
