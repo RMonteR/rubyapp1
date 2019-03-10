@@ -20,17 +20,19 @@
     </thead>
 
     <tbody>
-      <% @users.each do |user| %>
-        <tr scope= "row">
-          <td class= "user-info-table"><%= user.first_name %></td>
-          <td class= "user-info-table"><%= user.last_name %></td>
-          <td class= "user-info-table"><%= user.email %></td>
-          <td class= "user-info-table"><%= link_to 'Show', user %></td>
-          <td class= "user-info-table"><%= link_to 'Edit', edit_user_path(user) %></td>
-          <td class= "user-info-table"><%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-          <% logger.debug "User details: #{user.email} with role #{user.admin}" %>
-
-        </tr>
+      <% if signed_in? && current_user.admin? %>
+        <% @users.each do |user| %>
+          <tr scope= "row">
+            <td class= "user-info-table"><%= user.first_name %></td>
+            <td class= "user-info-table"><%= user.last_name %></td>
+            <td class= "user-info-table"><%= user.email %></td>
+            <td class= "user-info-table"><%= link_to 'Show', user %></td>
+            <td class= "user-info-table"><%= link_to 'Edit', edit_user_path(user) %></td>
+            <td class= "user-info-table"><%= link_to 'Delete', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            <% logger.debug "User details: #{user.email} with role #{user.admin}" %>
+          </tr>
+        <% end %>
+        <!-- else redirect to users/show -->
       <% end %>
     </tbody>
   </table>

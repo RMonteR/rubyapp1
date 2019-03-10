@@ -23,6 +23,7 @@
       </div>
 
       <ul class="navbar-nav ml-auto">
+        <li class= "user-logo"><i class="fas fa-user"></i></li>
         <% if user_signed_in? %>
         <li class="log-nav-item">
           <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "main-nav-item") %>

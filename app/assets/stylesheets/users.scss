@@ -95,3 +95,18 @@
 #new-user-btn a:hover {
   cursor: pointer;
 }
+
+.cmd-links {
+  display: inline;
+}
+.cmd-links a {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  color: #5a7592;
+  padding: 2px;
+}
+
+.cmd-links a:hover {
+  background: none;
+  color: #333;
+  text-decoration: none;
+ }

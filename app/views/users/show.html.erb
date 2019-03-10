@@ -7,12 +7,13 @@
         <!-- <p id="notice" class= "alert alert-secondary"><%= notice %></p> -->
         <% end %>
     <% end %>
-    
+
     <p class= "user-info">
       <strong>First name:</strong>
       <%= @user.first_name %>
     </p>
 
+<% logger.debug "UEIIIIIIIIIIIIIIIIIIIIIII #{@user.email}" %>
     <p class= "user-info">
       <strong>Last name:</strong>
       <%= @user.last_name %>
@@ -25,7 +26,6 @@
 
   </div>
 
-  <p> <%= link_to 'Edit', edit_user_path(@user)%> |
-  <%= link_to 'Back', users_path %> </p>
-
+  <p class="cmd-links"><%= link_to 'Edit', edit_user_path(@current_user) %></p>
+  <p class="cmd-links"><%= link_to 'Delete', @current_user, method: :delete, data: { confirm: 'Are you sure?' } %></p>
 </div>

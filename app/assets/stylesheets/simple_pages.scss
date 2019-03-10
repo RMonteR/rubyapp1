@@ -59,8 +59,12 @@ body {
   border-top: 1px solid #4d0000;
   border-bottom: 1px solid #4d0000;
   margin-right: 5px;
+  display: inline-block;
 }
 
+.user-logo {
+  display: inline-block;
+}
 #nav-search-label {
   text-decoration: none;
   color: #4d0000;
@@ -174,19 +178,6 @@ h4, .contact-h5 {
 .thanks-text {
   margin: auto;
 }
-
-#back-link a {
-  font-family: Georgia, Times, "Times New Roman", serif;
-  color: #5a7592;
-  display: inline;
-  padding: 2px;
-}
-
-#back-link a:hover {
-  background: none;
-  color: #333;
-  text-decoration: none;
- }
 
 #first-radio {
   padding-right: 10px;
