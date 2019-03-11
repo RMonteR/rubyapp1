@@ -7,4 +7,4 @@ test:
 production:
   adapter: postgresql
   url: postgres://kwighownmynyav:eb27450aae8259a1b3ce87a665ad5ef88702c9a4f4bd9bb952974371870089a7@ec2-107-21-224-76.compute-1.amazonaws.com:5432/d470it6j645m7u
-  channel_prefix: nameofapp_production
+  channel_prefix: madeupbikes_production
