@@ -6,16 +6,14 @@
   font-size: 40px;
   display: block;
   text-align: center;
-  text-decoration: none;
 }
 
-#wheel-btn a:hover {
-  text-decoration: none !important;
+a#wheel-btn:hover {
+  text-decoration: none;
   color: black;
 }
 
-#wheel-btn a {
+a#wheel-btn {
 display: block;
 text-align: center;
-text-decoration: none;
 }
