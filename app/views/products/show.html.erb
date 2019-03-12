@@ -10,7 +10,7 @@
       <%= @product.name %>
     </h1>
     <div class= "show-content">
-      <div class="row">
+      <div class="row", data-product-id="<%=@product.id %>">
         <div class= "col">
           <%= image_tag(@product.image_url, class: "img-fluid prod-image card-img-top img-thumbnail img-zoom", data_zoom_image: self) %>
           <p class="icon-text icon-text-show">
