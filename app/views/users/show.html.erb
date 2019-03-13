@@ -13,7 +13,6 @@
       <%= @user.first_name %>
     </p>
 
-<% logger.debug "UEIIIIIIIIIIIIIIIIIIIIIII #{@user.email}" %>
     <p class= "user-info">
       <strong>Last name:</strong>
       <%= @user.last_name %>
@@ -24,8 +23,10 @@
       <%= @user.email %>
     </p>
 
-  </div>
+    <p class= "user-info"><strong>To view your orders: <%= link_to "Click here", orders_path %></strong></p>
 
-  <p class="cmd-links"><%= link_to 'Edit', edit_user_path(@current_user) %></p>
-  <p class="cmd-links"><%= link_to 'Delete', @current_user, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <hr>
+
+    <p class="cmd-links"><%= link_to 'Edit', edit_user_path(@current_user) %> | </p>
+    <p class="cmd-links"><%= link_to 'Delete', @current_user, method: :delete, data: { confirm: 'Are you sure?' } %></p>
 </div>

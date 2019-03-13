@@ -11,11 +11,10 @@
             <p class= "order-prod-info">Name: </p><%= order.product&.name %><br>
             <p class= "order-prod-info">Description: </p><%= order.product&.description %><br>
             <strong class= "order-prod-info">Price: € <%= order.product&.price %></strong><br>
-            <i class= "order-prod-info order-link"> Click <%= link_to '*here*' %> for all details </i>
-            <!-- find out the right route to redirect the above "link_to" orders/show -->
+            <i class= "order-prod-info order-link"> Click <%= link_to '*here*', orders_show_path(order) %> for all details </i>
           </div>
           <div class="col-2 order-image">
-            <%= link_to image_tag(order.product.image_url, class: "order-image img-thumbnail") %>
+            <!-- add here order product image -->
           </div>
         </div>
         <hr>

@@ -3,7 +3,7 @@ class Comment < ApplicationRecord
   belongs_to :product
 
   validates :body, presence: true
-  # validates :rating, numericality: { only_integer: true }
+  validates :rating, numericality: { only_integer: true }
   # the 2 following validations are not necessary in ruby 5
   # validates :user, presence: true
   # validates :product, presence: true

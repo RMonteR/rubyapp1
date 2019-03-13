@@ -89,6 +89,7 @@
   <% end %> <!-- end cache -->
   <% if signed_in? && current_user.admin? %>
     <p class="show-bottom-btn"> <%= link_to 'Edit', edit_product_path(@product), :class=> "td-btn" %> | </p>
+    <p class="show-bottom-btn"> <%= link_to 'Delete', @product, method: :delete, data: { confirm: 'Are you sure?' }, :class=> "td-btn" %> | </p>
   <% end %>
   <p class="show-bottom-btn">
   <%= link_to 'Back', products_path, :class=> "td-btn" %> </p>
