@@ -46,24 +46,24 @@ describe Product do
     end
   end
 
-  # context "without a colour value" do
-  #   it "is not valid" do
-  #     expect(Product.new(colour: nil).not_to be_valid
-  #     expect(Product.new(colour: "").not_to be_valid
-  #   end
-  # end
+  context "without a colour value" do
+    it "is not valid" do
+      expect(Product.new(colour: nil)).not_to be_valid
+      expect(Product.new(colour: "")).not_to be_valid
+    end
+  end
 
-  # context "without a price value" do
-  #   it "is not valid"
-  #     expect(Product.new(price: nil)).not_to be_valid
-  #     # expect(Product.new(price: "")).not_to be_valid
-  #   end
-  # end
-  #
-  # context "without an image value" do
-  #   it "is not valid"
-  #     expect(Product.new(image: nil)).not_to be_valid
-  #     # expect(Product.new(image: "")).not_to be_valid
-  #   end
-  # end
+  context "without a price value" do
+    it "is not valid" do
+      expect(Product.new(price: nil)).not_to be_valid
+      expect(Product.new(price: "")).not_to be_valid
+    end
+  end
+
+  context "without an image value" do
+    it "is not valid" do
+      expect(Product.new(image_url: nil)).not_to be_valid
+      expect(Product.new(image_url: "")).not_to be_valid
+    end
+  end
 end
