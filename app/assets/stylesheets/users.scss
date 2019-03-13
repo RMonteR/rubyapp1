@@ -11,6 +11,11 @@
   border-radius: 5px;
 }
 
+@media only screen and (max-width: 600px) {
+  .devise-containers {
+    max-width: 100%;
+  }
+}
 .devise-titles {
   font-size: 3.125 em;
   color: #4d0000;
@@ -50,11 +55,7 @@
   cursor: pointer;
 }
 
-.input-field {
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 100%;
-}
+
 
 // VIEWS/DEVISE ONLY
 

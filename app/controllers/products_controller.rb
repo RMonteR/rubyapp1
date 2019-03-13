@@ -20,7 +20,6 @@ class ProductsController < ApplicationController
     @products = Product.all
     logger.debug "*** PRODUCT ID: #{@product.id} ***"
     @comments = @product.comments.paginate(:page => params[:page], :per_page => 3).order("created_at DESC")
-    # @comments = @product.comments.order("created_at DESC")
   end
 
   # GET /products/new

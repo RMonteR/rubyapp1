@@ -22,8 +22,9 @@
         </button>
       </div>
 
-      <ul class="navbar-nav ml-auto">
-        <li class= "user-logo"><i class="fas fa-user"></i></li>
+      <ul class="navbar-nav navbar-right">
+        <li class= "user-logo">
+          <a href="#"><i class="fas fa-user main-nav-item"></i></a></li>
         <% if user_signed_in? %>
         <li class="log-nav-item">
           <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "main-nav-item") %>
@@ -39,10 +40,12 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto main-nav-menu">
           <li class="main-nav-item active" id="first-nav-item"><%= link_to "Home", root_path, :class=> "main-nav-item" %></li>
-          <li><%= link_to "Products", products_path, :class => "main-nav-item" %> </li>
-          <li><%= link_to "Orders", orders_path, :class => "main-nav-item" %> </li>
-          <li> <%= link_to "About", simple_pages_about_path, :class=> "main-nav-item" %> </li>
-          <li> <%= link_to "Contact", simple_pages_contact_path, :class=> "main-nav-item" %></li>
+          <li><strong><%= link_to "Check our amazing bikes!", products_path, :class=> "main-nav-item" %></strong></li>
+          <li><%= link_to "News", simple_pages_landing_page_path, :class=> "main-nav-item" %></li>
+          <% if user_signed_in? %>
+            <li><%= link_to "Orders", orders_path, :class=> "main-nav-item" %></li>
+            <% end %>
+          <li><%= link_to "Contact", simple_pages_contact_path, :class=> "main-nav-item" %></li>
           <li>
             <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
               <%= form.label :q, 'Search for: ', :id=> "nav-search-label" %>
@@ -65,7 +68,7 @@
     <%= yield %>
 
     <footer class="site-footer">
-      Part of CF Web Dev Course    &copy; 2019 MadeUpBikes Berlin
+      <a href="https://github.com/RMonteR" target= "_blank"><i class="fab fa-github"></i></a>    &copy; 2019 MadeUpBikes Berlin
     </footer>
 <!------------------ BOOTSTRAP CORE JS -------------------->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
