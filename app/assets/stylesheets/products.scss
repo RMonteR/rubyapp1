@@ -63,21 +63,14 @@ p:hover.new-prod-btn {
   display: block;
 }
 
-.new-prod-form {
-  padding: 20px;
-}
+.new-prod-form {  padding: 20px;  }
 
-.field label {
-  font-size: 18px;
-}
+.field label {  font-size: 18px;  }
 
-.edit-div, .new-prod-div {
-  text-align: center;
-}
+.edit-div, .new-prod-div {  text-align: center; }
 
 
 // NEW go back to "create new product" link
-// Note: at the moment the only clickable part of fa-angle-left is the a. Make the icon clickable as well.
 .fa-angle-left {
   font-size: 25px;
   padding-top: 30px;
@@ -126,18 +119,12 @@ p:hover.new-prod-btn {
   padding: 15px;
 }
 
-.show-bottom-btn {
-  display: inline-block !important;
-}
+.show-bottom-btn {  display: inline-block !important; }
 // PRODUCT INDEX CARD
 
-.prod-card {
-  border: 1px solid rgba(139, 166, 171, 0.9);
-}
+.prod-card {  border: 1px solid rgba(139, 166, 171, 0.9); }
 
-.card-columns {
-  display: inline-block;
-}
+.card-columns { display: inline-block;  }
 
 #card-prod-name a {
   font-size: 1.5em;
@@ -176,17 +163,12 @@ p:hover.new-prod-btn {
   font-variant: petite-caps;
 }
 
-#rating-title {
-  padding-bottom: 15px;
-}
+#rating-title { padding-bottom: 15px; }
 
-.rated {
-  display: inline;
-}
+.rated {  display: inline;  }
 
-#average-title {
-  display: inline;
-}
+#average-title {  display: inline;  }
+
 #comment-field {
   width: 100%;
   height: 100px;
@@ -195,9 +177,7 @@ p:hover.new-prod-btn {
   resize: both;
 }
 
-#rating-form {
-  margin-bottom: 25px;
-}
+#rating-form {  margin-bottom: 25px;  }
 
 // COMMENTS PAGINATION
 
@@ -229,11 +209,13 @@ div .pagination {
   border-bottom: 1px solid #003366;
 }
 .comments_pagination .previous_page, .comments_pagination .next_page {
-    border-width: 2px; }
+  border-width: 2px; }
+
 .comments_pagination .previous_page {
-    margin-right: 1em; }
+  margin-right: 1em; }
+
 .comments_pagination .next_page {
-    margin-left: 1em; }
+  margin-left: 1em; }
 
 .page_info {
   text-align: center;

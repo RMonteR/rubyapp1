@@ -1,4 +1,5 @@
 FactoryBot.define do
+
   factory :comment do
     user { FactoryBot.create(:user) }
     product { FactoryBot.create(:product) }

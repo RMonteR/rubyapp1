@@ -36,9 +36,7 @@
   text-decoration: none;
 }
 
-.users-containers a {
-  margin-top: 10px;
-}
+.users-containers a { margin-top: 10px; }
 
 .user-btn input, input[type="submit" i], .user-btn a, user-btn {
   background-color: rgba(139,166,171, 0);
@@ -59,32 +57,22 @@
 
 // VIEWS/DEVISE ONLY
 
-#edit-user-left {
-  margin-right: 5px;
-}
+#edit-user-left { margin-right: 5px;  }
 
 // VIEWS/USERS ONLY
 
-.users-box {
-  margin-bottom: 10px;
-}
+.users-box {  margin-bottom: 10px;  }
 
-.devise-containers div.field {
-  padding: 10px;
-}
+.devise-containers div.field {  padding: 10px;  }
 
 .user-info {
   font-size: 18px;
   margin: 0;
 }
 
-#user-list {
-  max-width: 100%;
-}
+#user-list {  max-width: 100%;  }
 
-.userdata-row {
-  margin-top: 5px;
-}
+.userdata-row { margin-top: 5px;  }
 
 #new-user-btn a {
   padding: 5px 15px;
@@ -93,13 +81,9 @@
   color: #4d0000;
 }
 
-#new-user-btn a:hover {
-  cursor: pointer;
-}
+#new-user-btn a:hover { cursor: pointer;  }
 
-.cmd-links {
-  display: inline;
-}
+.cmd-links {  display: inline;  }
 .cmd-links a {
   font-family: Georgia, Times, "Times New Roman", serif;
   color: #5a7592;
