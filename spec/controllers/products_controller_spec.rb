@@ -52,8 +52,8 @@ describe ProductsController, type: :controller do
 
     context 'when clicking on "create product" button' do
       it 'saves the new product' do
-        # post :create, params: { name: "name", description: "description", image_url: "image_url", colour: "colour", price: 20 }
-        expect(response).to be_ok
+         post :create, params: { product: { name: "name", description: "description", image_url: "image_url", colour: "colour", price: 20 } }
+        expect(response).to redirect_to (Product.last)
       end
     end
   end
@@ -65,9 +65,8 @@ describe ProductsController, type: :controller do
 
     context 'when clicking on "update" button' do
       it 'saves changes to product' do
-        patch :edit, params: { id: @product.id }
-        put :edit, params: { id: @product.id }
-        expect(response).to be_ok
+        patch :update, params: { id: @product.id, product: { title: 'new'} }
+        expect(response).to redirect_to product_path(@product.id)
       end
     end
   end

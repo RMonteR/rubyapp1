@@ -11,10 +11,10 @@
             <p class= "order-prod-info">Name: </p><%= order.product&.name %><br>
             <p class= "order-prod-info">Description: </p><%= order.product&.description %><br>
             <strong class= "order-prod-info">Price: € <%= order.product&.price %></strong><br>
-            <i class= "order-prod-info order-link"> Click <%= link_to '*here*', orders_show_path(order) %> for all details </i>
+            <i class= "order-prod-info order-link"> Click <%= link_to '*here*', order_path(order) %> for all details </i>
           </div>
           <div class="col-2 order-image">
-            <!-- add here order product image -->
+            <%= link_to image_tag(order.product&.image_url, class: "img-fluid prod-image card-img-top img-thumbnail") if order.product&.image_url.present? %>
           </div>
         </div>
         <hr>

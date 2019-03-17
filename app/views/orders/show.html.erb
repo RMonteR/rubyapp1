@@ -2,10 +2,10 @@
   <div class="devise-containers order-recap">
   <h2>Order Information</h2>
   <% cache do %>
-  <%= link_to image_tag(@order.product.image_url, class: "img-fluid prod-image card-img-top img-thumbnail") %>
+  <%= link_to image_tag(@order.product&.image_url, class: "img-fluid prod-image card-img-top img-thumbnail") if @order.product&.image_url.present? %>
   <strong>Order ID: </strong><%= @order.id %><br>
-  <strong>Product Name: </strong><%= @order.product.name %><br>
-  <strong>Product Price: €</strong><%= @order.product.price %><br>
+  <strong>Product Name: </strong><%= @order.product&.name %><br>
+  <strong>Product Price: €</strong><%= @order.product&.price %><br>
   <strong>Total Price: €</strong><%= @order.total %><br>
   <strong>Payed on: </strong><br>
   <strong>Shipped on: </strong><br>

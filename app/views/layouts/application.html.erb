@@ -23,9 +23,10 @@
       </div>
 
       <ul class="navbar-nav navbar-right">
-        <li class= "user-logo">
-          <a href="#"><i class="fas fa-user main-nav-item"></i></a></li>
         <% if user_signed_in? %>
+
+        <li class= "user-logo">
+          <%= link_to('<i class="fas fa-user main-nav-item"></i>'.html_safe, user_path(current_user)) %></li>
         <li class="log-nav-item">
           <%= link_to('Logout', destroy_user_session_path, method: :delete, class: "main-nav-item") %>
         </li>
